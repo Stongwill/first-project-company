@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Займ под залог ПТС от 2% в месяц<</title>
+    <title>Займ под залог ПТС от 2% в месяц</title>
   </head>
   <body>
     <header class="header">
@@ -23,7 +23,7 @@
               <span>Займ</span> под залог ПТС от <span>2%</span> в месяц
             </h1>
             <p class="subtitle">в Ростове-на-Дону</p>
-            <a href="#" class="btn">Получить деньги</a>
+            <a href="#calculate" class="btn">Получить деньги</a>
           </div>
           <div class="home__img">
             <img
@@ -39,13 +39,13 @@
 
     <section class="benefits">
       <div class="container">
-        <div class="title__bg">        
-        <h2 class="title__content"><span>Наши</span> преимущества</h2>
-      </div>
-      <div class="benefits__border">
-        <span></span>
-      </div>
-  
+        <div class="title__bg">
+          <h2 class="title__content"><span>Наши</span> преимущества</h2>
+        </div>
+        <div class="border__style">
+          <span></span>
+        </div>
+
         <div class="benefits__items">
           <div class="benefits__items-card">
             <img src="./images/benefits-one.png" alt="" class="benefits__img" />
@@ -53,32 +53,49 @@
               Без подтверждения дохода и без поручителей
             </h4>
             <p class="benefits__description">
-              Под залог авто нужно всего три документа: <br>паспорт РФ, СТС, ПТ. <br>Для беззаголового займа только паспорт РФ
+              Под залог авто нужно всего три документа: <br />паспорт РФ, СТС,
+              ПТ. <br />Для беззаголового займа только паспорт РФ
             </p>
           </div>
           <div class="benefits__items-card">
             <img src="./images/benefits-two.png" alt="" class="benefits__img" />
-            <h4 class="benefits__title">Машина <br >остаётся у вас</h4>
+            <h4 class="benefits__title">Машина <br />остаётся у вас</h4>
             <p class="benefits__description">
-              Не забираем <br> и не ставим отметок в ПТС. Авто остается у владельца
+              Не забираем <br />
+              и не ставим отметок в ПТС. Авто остается у владельца
             </p>
           </div>
           <div class="benefits__items-card">
-            <img src="./images/benefits-three.png" alt="" class="benefits__img" />
+            <img
+              src="./images/benefits-three.png"
+              alt=""
+              class="benefits__img"
+            />
             <h4 class="benefits__title">На любые цели</h4>
             <p class="benefits__description">
               На ваши личные цели или для бизнеса
             </p>
           </div>
           <div class="benefits__items-card">
-            <img src="./images/benefits-four.png" alt="" class="benefits__img" />
-            <h4 class="benefits__title">Любая <br> кредитная история</h4>
+            <img
+              src="./images/benefits-four.png"
+              alt=""
+              class="benefits__img"
+            />
+            <h4 class="benefits__title">
+              Любая <br />
+              кредитная история
+            </h4>
             <p class="benefits__description">
               Нам не важна кредитная история заемщика
             </p>
           </div>
           <div class="benefits__items-card">
-            <img src="./images/benefits-five.png" alt="" class="benefits__img" />
+            <img
+              src="./images/benefits-five.png"
+              alt=""
+              class="benefits__img"
+            />
             <h4 class="benefits__title">До 90 % от стоимости авто</h4>
             <p class="benefits__description">
               Выдаем максимально возможную сумму займа
@@ -89,20 +106,95 @@
     </section>
 
     <!-- Рассчитайте свой займ   -->
+    <section class="calculate" id="calculate">
+      <div class="container calculate__container">
+        <div class="title__bg">
+          <h2 class="title__content"><span>Рассчитайте</span> свой займ</h2>
+        </div>
+
+        <div class="border__style">
+          <span></span>
+        </div>
+        <div class="calculate__inner">
+          <div class="calculate__input">
+            <h4 class="calculate__title">сумма займа</h4>
+            <form
+              class="calculate__form"
+              onsubmit="return false"
+              oninput="level.value = flevel.valueAsNumber"
+            >
+              <input
+                type="number"
+                placeholder="45000"
+                class="calculate__form-input"
+              />
+              <input
+                class="calculate__form-radio"
+                name="flevel"
+                id="flying"
+                type="range"
+                min="10000"
+                max="100000"
+                value="10000"
+                step="10"
+              />
+              <div class="calculate__number">
+                <output for="flying" name="level">10000</output>
+                <output>100000</output>
+              </div>
+            </form>
+
+            <h4 class="calculate__title">срок займа</h4>
+            <form class="calculate__form">
+              <input
+                class="calculate__form-input"
+                type="text"
+                max="100000"
+                maxlength="20"
+                placeholder="10         месяцев"
+              />
+              <input class="calculate__form-radio" type="range" />
+              <div class="calculate__number calculate__number-right">
+                <output>100000</output>
+              </div>
+            </form>
+            <button type="submit" href="#" class="btn">Получить деньги</button>
+          </div>
+          <div class="calculate__price">
+            <h4 class="calculate__title">Наше предложение</h4>
+            <p class="calculate__text">Сумма займа :</p>
+            <span>45 000р</span>
+            <p class="calculate__text">Ежемесячный платеж :</p>
+            <span>4 500р</span>
+            <p class="calculate__text">Процентная ставка :</p>
+            <span>2%</span>
+          </div>
+
+          <img
+            src="./images/calculate.png"
+            alt="calculate"
+            class="calculate__img"
+          />
+        </div>
+      </div>
+    </section>
 
     <section class="requirements">
       <div class="container">
-        <div class="title__bg">       
-        <h2 class="title__content">Требования</h2>
-        
-          </div>
+        <div class="title__bg">
+          <h2 class="title__content">Требования</h2>
+        </div>
+        <div class="border__style">
+          <span></span>
+        </div>
         <div class="requirements__inner">
           <div class="requirements__category">
             <h2 class="requirements__category-title">К заемщикам</h2>
 
             <ul class="requirements__category-list">
               <li class="requirements__category-item">
-                Гражданство РФ, наличие постоянной регистрации на территории РФ.
+                Гражданство РФ, наличие <br />постоянной регистрации на
+                территории РФ.
               </li>
               <li class="requirements__category-item">
                 Нужно быть собственником транспортного средства (для займа под
@@ -115,35 +207,40 @@
               </li>
               <li class="requirements__category-item">ПТС</li>
             </ul>
-            <a class="requirements__link">Получить деньги</a>F
+            <a class="requirements__link btn" href="#calculate"
+              >Получить деньги</a
+            >
           </div>
 
-          <div class="requirements__category">
-            <h2 class="requirements__category-title">К автомобилям</h2>
-
+          <div class="requirements__category requirements__category-auto">
+            <div class="requirements__category-white">
+              <h2 class="requirements__category-title">К автомобилям</h2>
+            </div>
             <ul class="requirements__category-list">
               <li class="requirements__category-item">
-                Категории — «B» Состоять на учете в РФ. Находиться в исправном в
-                исправном состоянии без существенных повреждений.
+                Категории — «B» Состоять на учете в РФ. Находиться <br />
+                в исправном состоянии без существенных повреждений.
               </li>
               <li class="requirements__category-item">
                 Не старше 20 лет для иностранных марок. Не старше 7 лет для
                 российских.
               </li>
               <li class="requirements__category-item">
-                Категории — «LCV», например, «ГАЗель» Все тоже самое для легких
-                коммерческих автомобилей.
+                Категории — «LCV», например, «ГАЗель» <br />Все тоже самое для
+                легких коммерческих автомобилей.
               </li>
               <li class="requirements__category-item">
                 Не старше 15 лет для иностранных марок, не старше 11 лет для
                 российских.
               </li>
             </ul>
-            <a class="requirements__link">Получить деньги</a>
+            <a class="requirements__link" href="#calculate">Получить деньги</a>
           </div>
 
           <div class="requirements__category">
-            <h2 class="requirements__category-title">
+            <h2
+              class="requirements__category-title requirements__category-title-other"
+            >
               К остальному транспорту
             </h2>
 
@@ -161,7 +258,10 @@
                 рассматриваются индивидуально
               </li>
             </ul>
-            <a class="requirements__link">Получить деньги</a>
+
+            <a class="requirements__link btn" href="#calculate"
+              >Получить деньги</a
+            >
           </div>
         </div>
       </div>
@@ -169,68 +269,107 @@
 
     <section class="decor">
       <div class="container">
-        <div class="title__bg">       
-        <h2 class="title__content"><span>Оформление</span> в четыре шага</h2>
+        <div class="title__bg">
+          <h2 class="title__content"><span>Оформление</span> в четыре шага</h2>
+        </div>
+        <div class="border__style">
+          <span></span>
         </div>
         <div class="decor__list">
           <div class="decor__card">
-            <p class="decor__number-title">1</p>
-            <p class="decor__desc">Оставьте контакты Мы с вами свяжемся</p>
-          </div>
-          <div class="decor__card">
-            <p class="decor__number-title">2</p>
+            <p class="decor__number-title decor__number-title--one">1</p>
             <p class="decor__desc">
-              Приезжайте в офис Для оформления документов
+              Оставьте контакты <br />
+              Мы с вами свяжемся
             </p>
           </div>
           <div class="decor__card">
-            <p class="decor__number-title">3</p>
-            <p class="decor__desc">Подписание договора</p>
+            <p class="decor__number-title decor__number-title--two">2</p>
+            <p class="decor__desc">
+              Приезжайте в офис <br />Для оформления документов
+            </p>
+          </div>
+          <div class="decor__card decor__card-three">
+            <p class="decor__number-title decor__number-title--three">3</p>
+            <p class="decor__desc">
+              Подписание<br />
+              договора
+            </p>
           </div>
           <div class="decor__card">
-            <p class="decor__number-title">4</p>
-            <p class="decor__desc">Получение денег На карту или наличными</p>
+            <p class="decor__number-title decor__number-title--four">4</p>
+            <p class="decor__desc">
+              Получение денег <br />
+              На карту или наличными
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="services">
-      <div class="container">
-        <div class="title__bg">       
+      <div class="container services__container">
         <h2 class="title__content title__content-bg">Услуги</h2>
+        <div class="border__style">
+          <span></span>
         </div>
         <div class="services__list">
           <div class="services__card">
-            <img src="#" alt="" class="services__img" />
+            <img
+              src="./images/services-one.png"
+              alt="gruz-auto"
+              class="services__img"
+            />
             <p class="services__text">Займ под ПТС грузового авто</p>
+            <div></div>
             <a href="#" class="services__link">Подробнее ..</a>
           </div>
           <div class="services__card">
-            <img src="#" alt="" class="services__img" />
-            <p class="services__text">Займ под ПТС для пенсионеров</p>
+            <img src="./images/services-two.png" alt="" class="services__img" />
+            <p class="services__text">Займ под ПТС <br />для пенсионеров</p>
+            <div></div>
             <a href="#" class="services__link">Подробнее ..</a>
           </div>
           <div class="services__card">
-            <img src="#" alt="" class="services__img" />
+            <img
+              src="./images/services-three.png"
+              alt="pensioner"
+              class="services__img"
+            />
             <p class="services__text">Займ под ПТС без справок о доходах</p>
+            <div></div>
             <a href="#" class="services__link">Подробнее ..</a>
           </div>
           <div class="services__card">
-            <img src="#" alt="" class="services__img" />
+            <img
+              src="./images/services-four.png"
+              alt="check-list"
+              class="services__img"
+            />
             <p class="services__text">Займ под авто с правом вождения</p>
+            <div></div>
             <a href="#" class="services__link">Подробнее ..</a>
           </div>
           <div class="services__card">
-            <img src="#" alt="" class="services__img" />
+            <img
+              src="./images/services-five.png"
+              alt="prava"
+              class="services__img"
+            />
             <p class="services__text">Займ под ПТС без отказа</p>
+            <div></div>
             <a href="#" class="services__link">Подробнее ..</a>
           </div>
           <div class="services__card">
-            <img src="#" alt="" class="services__img" />
+            <img
+              src="./images/services-six.png"
+              alt="banknot"
+              class="services__img"
+            />
             <p class="services__text">
-              Займ под ПТС с плохой кредитной историей
+              Займ под ПТС с <br />плохой кредитной историей
             </p>
+            <div></div>
             <a href="#" class="services__link">Подробнее ..</a>
           </div>
         </div>
@@ -239,62 +378,127 @@
 
     <section class="questions">
       <div class="container">
-        <div class="title__bg">       
-        <h2 class="title__content"><span>Частые</span> вопросы</h2>
+        <div class="title__bg">
+          <h2 class="title__content"><span>Частые</span> вопросы</h2>
         </div>
-        <!-- Ответы на вопросы -->
+        <div class="border__style">
+          <span></span>
+        </div>
+        <div class="questions__list">
+          <div class="questions__item">
+            <label for="faq_1" class="questions__title"
+              >Я пенсионер. Дадут мне займ?</label
+            >
+            <input type="checkbox" class="questions__input" id="faq_1" />
+    
+              <p class="questions__text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
+                deserunt ipsum temporibus dolore asperiores nesciunt architecto
+                illo ipsa laborum qui illum, tempora quo dolorum adipisci?
+              </p>
+          
+          </div>
+          <div class="questions__item">
+            <label for="faq_2" class="questions__title"
+              >Какие машины подойдут для залога?
+            </label>
+            <input type="checkbox" class="questions__input" id="faq_2" />
+            <p class="questions__text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
+                deserunt ipsum temporibus dolore asperiores nesciunt architecto
+                illo ipsa laborum qui illum, tempora quo dolorum adipisci?
+              </p>
+          </div>
+          <div class="questions__item">
+            <label for="faq_3" class="questions__title"
+              >Какая минимальная сумма займа под залог?</label
+            >
+            <input type="checkbox" class="questions__input" id="faq_3" />
+            <p class="questions__text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
+                deserunt ipsum temporibus dolore asperiores nesciunt architecto
+                illo ipsa laborum qui illum, tempora quo dolorum adipisci?
+              </p>
+          </div>
+          <div class="questions__item">
+            <label for="faq_4" class="questions__title"
+              >Какие есть гарантии ?
+            </label>
+            <input type="checkbox" class="questions__input" id="faq_4" />
+            <p class="questions__text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
+                deserunt ipsum temporibus dolore asperiores nesciunt architecto
+                illo ipsa laborum qui illum, tempora quo dolorum adipisci?
+              </p>
+          </div>
+          <div class="questions__item">
+            <label for="faq_5" class="questions__title"
+              >Как осуществляется оценка авто?
+            </label>
+            <input type="checkbox" class="questions__input" id="faq_5" />
+            <p class="questions__text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
+                deserunt ipsum temporibus dolore asperiores nesciunt architecto
+                illo ipsa laborum qui illum, tempora quo dolorum adipisci?
+              </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
-          <div class="footer__blog">
-            <a href="/"><img src="#" alt="" class="logo" /></a>
+          <div class="footer__blog footer__blog-info">
+            <a href="/"><img src="./images/logo.png" alt="logo" class="logo" /></a>
             <p class="footer__address">
               г. Ростов-на-Дону, Востряковский проезд дом 10Б, строение 16
             </p>
-            <a href="mailto:info@autozaim.ru" class="footer__mail footer__text"
+            <a href="mailto:info@autozaim.ru" class="footer__mail"
               >info@autozaim.ru</a
             >
-            <a href="tel:+79998783443" class="footer__phone footer__text"
+            <a href="tel:+79998783443" class="footer__phone"
               >+7(999)878-34-43</a
             >
           </div>
           <div class="footer__blog">
             <h5 class="footer__title">Компания</h5>
-            <p class="footer__text">ИНН 569809</p>
-            <p class="footer__text">ОРГН 34790876</p>
-            <p class="footer__text">Политика конфеденциальности</p>
-            <p class="footer__text">Все права защищены</p>
+            <a class="footer__text">ИНН 569809</a>
+            <a class="footer__text">ОРГН 34790876</a>
+            <a class="footer__text footer__text-full">Политика конфеденциальности</a>
+            <a class="footer__text">Все права защищены</a>
           </div>
           <div class="footer__blog">
             <h5 class="footer__title">Услуги</h5>
-            <p class="footer__text">Займ под ПТС грузового авто</p>
-            <p class="footer__text">Займ под ПТС для пенсионеров</p>
-            <p class="footer__text">Займ под ПТС с плохой кредитной историей</p>
+            <a class="footer__text">Займ под ПТС грузового авто</a>
+            <a class="footer__text">Займ под ПТС для пенсионеров</a>
+            <a class="footer__text">Займ под ПТС с плохой кредитной историей</a>
           </div>
-          <div class="footer__blog">
-            <p class="footer__text">Займ под ПТС без справок о доходах</p>
-            <p class="footer__text">Займ под авто с правом вождения</p>
-            <p class="footer__text">Займ под ПТС без отказа</p>
+          <div class="footer__blog footer__blog-align">
+            <a class="footer__text">Займ под ПТС без справок о доходах</a>
+            <a class="footer__text">Займ под авто с правом вождения</a>
+            <a class="footer__text">Займ под ПТС без отказа</a>
           </div>
-          <div class="footer__blog">
-            <input
+          <div class="footer__blog footer__blog-social">
+            <div class="footer__input">
+              <input
               type="search"
               class="footer__search"
               placeholder="Поиск по сайту"
+              id="search"
             />
-            <input type="submit" />
+            <button class="btn__search" type="submit" id="search"></button>
+            </div>
+            <p class="social__text">социальные сети</p>
             <div class="social">
               <img
-                src="./images/instagram.svg"
+                src="./images/instagram.png"
                 alt="instagram"
                 class="social__img"
               />
-              <img src="./images/vk.svg" alt="vk" class="social__img" />
+              <img src="./images/vk.png" alt="vk" class="social__img" />
               <img
-                src="./images/youtube.svg"
+                src="./images/youtube.png"
                 alt="youtube"
                 class="social__img"
               />
