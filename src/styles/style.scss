@@ -526,7 +526,7 @@ span{
     font-family: 'Medium';
     color: #545557;
     text-transform: uppercase;
-    line-height: 36px;
+    // line-height: 36px;
     height: 96px;
     margin-bottom: 25px;
 }
@@ -658,6 +658,9 @@ span{
         background: url('../images/mail.png') no-repeat;
     }
 }
+.contact, .form{
+    display: none;
+}
 .footer__phone{
     position: relative;
     display: block;
@@ -704,7 +707,9 @@ span{
     }
 
 }
-
+    .contact, .form{
+        display: none;
+    }
 .btn__search{
     content: '';
     position: absolute;
@@ -727,6 +732,75 @@ span{
     gap: 10px;
 }
 
+
+.form{
+    margin-top: 222px;
+    margin-bottom: 329px;
+    &__contact{
+        text-align: center;
+    }
+    &__contact-input{
+        font-size: 24px;
+        color: #007fff;
+        width: 100%;
+        padding: 32px 0 41px 22px;
+        border-color: #007fff;
+        &+.form__contact-input{
+            margin-top: 23px;
+        }
+        &::placeholder{
+            color: #007fff;
+        }
+    }
+    .btn{
+        margin-top: 95px;
+
+    }
+}
+
+.contact__info{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact__title{
+    font-family: 'Bold';
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    color: #0060ef;
+    width: max-content;
+    border-bottom: 5px solid #0060ef;
+}
+.contact__text{
+    font-size: 25px;
+    line-height: 32px;
+    color: #606060;
+    a{
+        display: block;
+        padding-bottom: 9px;
+        color: #606060;
+    }
+    &+.contact__text{
+        margin-top: 60px;
+    }
+}
+
+.contact__phone{
+    position: relative;
+    border-bottom: 2px solid #606060;
+    &::before{
+        position: absolute;
+        left: -22px;
+        bottom: 9px;
+        content: '';
+        width: 22px;
+        height: 23px;
+        background: url('../images/contact-tel.png') no-repeat;
+    }
+}
 
 @media (max-width: 1600px){
     .calculate__img{
@@ -902,7 +976,9 @@ span{
     .footer{
         display: none;
     }
-
+    .contact, .form{
+        display: block;
+    }
 }
 @media (max-width: 650px){
     .bur{
@@ -910,9 +986,11 @@ span{
         width: 57px;
         span{
         display: block;
-        margin-bottom: 11px;
         height: 5px;
         background: #fff;
+        &+span{
+            margin-top: 11px;
+        }
         }
     }
     .home__image, .phone{
@@ -961,6 +1039,9 @@ span{
     }
     .requirements__category {
         max-width: 350px;
+        &-list{
+            max-width: 215px;
+        }
     }
     .title__content {
         font-size: 30px;
@@ -980,6 +1061,12 @@ span{
     }
     .calculate__input, .calculate__form {
         max-width: 270px;
+    }
+    .form__contact-input{
+        padding: 17px 0 26px 22px;
+    }
+    .bur {
+        width: 43px;
     }
 }
 
