@@ -1093,6 +1093,14 @@ span{
     .services__list{
         grid-template-columns: 1fr;
     }
+    .services__card{
+        width: 100%;
+        max-width: inherit;
+        text-align: center;
+        div{
+            margin: 0 auto 25px
+        }
+    }
     .requirements__category {
         max-width: 350px;
         &-list{
