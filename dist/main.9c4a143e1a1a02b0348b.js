@@ -1,2 +1,0 @@
-(()=>{"use strict";const e=document.querySelector("#bur"),o=document.querySelector("#popup"),t=document.querySelector(".footer__mobile").cloneNode(1),c=document.body;e.addEventListener("click",(e=>{e.preventDefault(),o.classList.toggle("open"),c.classList.toggle("noscroll"),o.appendChild(t)}))})();
-//# sourceMappingURL=main.9c4a143e1a1a02b0348b.js.map

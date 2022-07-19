@@ -504,6 +504,7 @@ span{
     background:   -ms-linear-gradient( -171deg, rgb(0,198,255) 0%, rgb(0,156,255) 55%, rgb(0,114,255) 100%), url('../images/services-bg.jpg');
     background-repeat: no-repeat;
     padding-bottom: 243px;
+    background-position: center;
     background-size: cover;
     background-blend-mode: multiply;
     // opacity: 0.91;
@@ -992,6 +993,7 @@ span{
     .calculate__inner {
       flex-direction: column;
       justify-content: initial;
+      align-items: center;
     }
     .home__image {
         width: 386px;
