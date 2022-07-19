@@ -1,7 +1,7 @@
 {
   "name": "webpack-two",
   "version": "1.0.0",
-  "homepage": "https://Stongwill.github.io/tecnology-landing",
+  "homepage": "https://Stongwill.github.io/first-project-company",
   "main": "index.js",
   "scripts": {
     "dev": "set NODE_ENV=development&&webpack",
